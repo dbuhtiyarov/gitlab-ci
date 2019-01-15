@@ -6,6 +6,7 @@ cache:
 
 stages:
   - test
+  - deploy
 
 test_async:
   stage: test
@@ -22,5 +23,12 @@ test_db:
   script:
    - npm install
    - node ./specs/start.js ./specs/db-postgres.spec.js
+  tags:
+    - docker
+
+deploy_node:
+  stage: deploy
+  script:
+   - node index.js
   tags:
     - docker
