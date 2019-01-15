@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Sample NodeJS Project for GitLab Runner
 
 This is NodeJS project that accompanies my guest
@@ -30,7 +29,3 @@ DB_USER=testuser \
 DB_PASS=123456 \
 DB_HOST=localhost:5432  \
 node ./specs/start.js
-```
-=======
-
->>>>>>> d6a49b087df0f9e1b12774a5ea82d4c9531a37cb
