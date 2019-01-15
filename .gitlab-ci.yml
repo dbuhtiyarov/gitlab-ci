@@ -29,6 +29,6 @@ test_db:
 deploy_node:
   stage: deploy
   script:
-   - node index.js
+   - npm start
   tags:
     - docker
