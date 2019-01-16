@@ -32,6 +32,7 @@ test_db:
 build_app:
   stage: build
   image: docker:stable 
+  service: docker:dind
   script:
    - docker build -t db/node-web-app .
   tags:
