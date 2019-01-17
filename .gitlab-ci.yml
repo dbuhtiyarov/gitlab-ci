@@ -28,8 +28,8 @@ test_db:
   tags:
     - docker
 
-before_script:
-  - docker login -u db -p $registry_pass registry.gitlab.playpit.net
+#before_script:
+#  - docker login -u db -p $registry_pass registry.gitlab.playpit.net
 
 build_app:
   stage: build
@@ -38,6 +38,7 @@ build_app:
     - docker:dind
   script:
    - docker build -t registry.gitlab.playpit.net/db/nodejs:$CI_JOB_ID .
+   - docker login -u db -p $registry_pass registry.gitlab.playpit.net
    - docker push registry.gitlab.playpit.net/db/nodejs:$CI_JOB_ID
   tags:
     - docker
