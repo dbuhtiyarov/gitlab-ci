@@ -35,7 +35,7 @@ build_app:
   services:
     - docker:dind
   script:
-   - docker build -t db/node-web-app .
+   - docker build -t registry.gitlab.playpit.net/db/nodejs:$CI_JOB_ID .
   tags:
     - docker
 
